@@ -26,20 +26,20 @@ void test_addition_at_head()
 
 	assert (slist_length(list) == 7);
 	assert (slist_lookup(list, 49));
-	//list = slist_delete_head(list);
-	//list = slist_delete_tail(list);*/
+	list = slist_delete_head(list);
+	list = slist_delete_tail(list);*/
 
-	//slist_display(list);
-	//list_min_max(list);
-	//list = slist_spec_ele(list,100,26);
 	slist_display(list);
-	//list = slist_spec_ele_delete(list,35);
-	//slist_display(list);
+	list_min_max(list);
+	list = slist_spec_ele(list,100,26);
+	slist_display(list);
+	list = slist_spec_ele_delete(list,35);
+	slist_display(list);
 
 }
 
 
-/*void test_addition_at_tail()
+void test_addition_at_tail()
 {
     Slist s = slist_new();
 	Slist *list = &s;
@@ -55,21 +55,21 @@ void test_addition_at_head()
 
 	assert (slist_length(list) == 7);
 	assert (slist_lookup(list, 49));
-	//list = slist_delete_head(list);
-	//list = slist_delete_tail(list);
+	list = slist_delete_head(list);
+	list = slist_delete_tail(list);
 
 	slist_display(list);
-	//slist_min_max(list);
-	//list = slist_spec_ele(list,100,26);
-	//slist_display(list);
-	//list = slist_spec_ele_delete(list,35);
-	//slist_display(list);
+	slist_min_max(list);
+	list = slist_spec_ele(list,100,26);
+	slist_display(list);
+	list = slist_spec_ele_delete(list,35);
+	slist_display(list);
 
-}*/
+}
 
 int main()
 {
-	//test_empty_list();
+	test_empty_list();
 	Slist s = slist_new();
 	Slist *list = &s;
 
@@ -93,53 +93,38 @@ int main()
 	list = slist_add_head(list, 80);
     list = slist_add_head(list, 80);
     list = slist_add_head(list, 100);
-	//slist_display(list1);
+	slist_display(list1);
 
 
-	//list = slist_spec_ele(list,100,60);
-	//list = slist_spec_ele_delete(list,60);
-	//assert (slist_lookup(list, 50)==0);
-	//test_addition_at_tail();
-	//slist_display(list);
-	//list = reverse_list(list);
+	list = slist_spec_ele(list,100,60);
+	list = slist_spec_ele_delete(list,60);
+	assert (slist_lookup(list, 50)==0);
+	test_addition_at_tail();
+	slist_display(list);
+	list = reverse_list(list);
 
-	//list = slist_add_tail(list, 26);
-	//slist_display(list);
-    //slist_min_max(list);
-	//slist_display(list);
-	//slist_display(list);
-    //assert(list_compare(list,list1)==1);
+	list = slist_add_tail(list, 26);
+	slist_display(list);
+    slist_min_max(list);
+	slist_display(list);
+	slist_display(list);
+    assert(list_compare(list,list1)==1);
 
-    //union_list = union_twolist(union_list,list,list1);
-    //slist_display(union_list);
+    union_list = union_twolist(union_list,list,list1);
+    slist_display(union_list);
     intersection_list= intersection_twolist(intersection_list,list,list1);
     slist_display(intersection_list);
 
-    //Slist uni = slist_new();
-	//Slist *unique_list = &uni;
+    Slist uni = slist_new();
+	Slist *unique_list = &uni;
 
-	//unique_list=unique_slist(unique_list,10);
-	//unique_list=unique_slist(unique_list,20);
-	//assert(unique_slist(unique_list,10));
-    //slist_display(unique_list);
+	unique_list=unique_slist(unique_list,10);
+	unique_list=unique_slist(unique_list,20);
+	assert(unique_slist(unique_list,10));
+    slist_display(unique_list);
 
 
 
-    	//test_addition_at_head();
+    	test_addition_at_head();
 	return 0;
 }
-
-/*
- *	Running your programs. Assume that already you have
- *	'slist.h', 'slist.c' and 'slist_spec.c' files.
- *
- *	gcc slist.c slist_spec.c -o slist
- *
- *	If you get errors, fix them. Otherwise you have exe file
- *	with name 'slist' (due to -o slist option used during compilation)
- *
- *	Running exe file:	./a.out slist
- *	If you don't get any message in terminal, code executed perfectly
- *	( No news good news!!!!!!!)
- *
-*/
