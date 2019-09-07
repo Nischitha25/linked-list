@@ -65,7 +65,7 @@ uint32_t slist_lookup(Slist *list,int32_t key)
 }
 
 
-/*Slist* slist_delete_head(Slist *list)
+Slist* slist_delete_head(Slist *list)
 {
   Node* temp;
   if(list->head!=NULL){
@@ -77,7 +77,7 @@ uint32_t slist_lookup(Slist *list,int32_t key)
         --list->length;
   }free(temp);
   return list;
-}*/
+}
 
 Slist* slist_add_tail(Slist *list,int32_t element)
 {
@@ -95,7 +95,7 @@ Slist* slist_add_tail(Slist *list,int32_t element)
 }
 
 
-/*Slist* slist_delete_tail(Slist *list)
+Slist* slist_delete_tail(Slist *list)
 {
         assert(list!=NULL);
         Node *cur,*temp;
@@ -108,7 +108,7 @@ Slist* slist_add_tail(Slist *list,int32_t element)
             --list->length;
         }
         return list;
-}*/
+}
 
 
 Slist* slist_display(Slist *list)
@@ -133,7 +133,7 @@ int count=0;
      printf("length of list: %d\n",count);
  }
 
-/*Slist* slist_min_max(Slist *list) {
+Slist* slist_min_max(Slist *list) {
     Node *travel = list->head;
     int min=travel->data, max=0;
     assert(list!=NULL);
@@ -148,8 +148,8 @@ int count=0;
     }
     printf("min: %d max: %d\n",min,max);
 }
-*
-/*Slist* slist_spec_ele(Slist *list, int32_t element,int32_t spec_ele)
+
+Slist* slist_spec_ele(Slist *list, int32_t element,int32_t spec_ele)
 {
     assert(list!=NULL);
     Node *new_node=slist_new_node(element);
@@ -171,9 +171,9 @@ int count=0;
     ++list->length;
     return list;
 
-}*/
+}
 
-/*Slist* slist_spec_ele_delete(Slist *list, int32_t spec_ele)
+Slist* slist_spec_ele_delete(Slist *list, int32_t spec_ele)
 {
     assert(list != NULL);
     Node *temp,*prev;
@@ -195,9 +195,9 @@ int count=0;
    --list->length;
    }
     return list;
-}*/
+}
 
-/*Slist* reverse_list(Slist *list)
+Slist* reverse_list(Slist *list)
 {
 assert(list!=NULL);
 Node *prev=NULL,*nxt=NULL,*temp,*temp1;
@@ -215,9 +215,9 @@ while(temp!=NULL)
 list->tail=temp1;
 list->head = prev;
 return list;
-}*/
+}
 
-/*uint32_t list_compare(Slist *list1,Slist *list2)
+uint32_t list_compare(Slist *list1,Slist *list2)
 {
     assert(list1!=NULL);
     assert(list2!=NULL);
@@ -238,9 +238,9 @@ return list;
         temp2=temp2->next;
     }
     return (list1 == NULL && list2==NULL);
-}*/
+}
 
-/*Slist* union_twolist(Slist *union_list,Slist *list1,Slist *list2)
+Slist* union_twolist(Slist *union_list,Slist *list1,Slist *list2)
 {
     assert(list1!=NULL);
     assert(list2!=NULL);
@@ -267,7 +267,7 @@ return list;
         temp2=temp2->next;
     }
     return union_list;
-}*/
+}
 
 
 Slist* intersection_twolist(Slist *intersection_list,Slist *list1,Slist *list2)
